@@ -6,7 +6,7 @@ export default function NotesSection() {
     const displayedHandbooks = handbooks.slice(0, 4);
 
     return (
-        <section className="py-24 bg-brand-white dark:bg-brand-black relative overflow-hidden">
+        <section className="py-24 bg-brand-black/5 dark:bg-brand-white/5 transition-colors duration-500 overflow-hidden relative group/section">
             {/* Background Decoration matches Tutorials section style if possible or kept simple */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -34,19 +34,19 @@ export default function NotesSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-brand-white dark:bg-[#0F1623] border border-brand-black/10 dark:border-gray-800 rounded-xl p-8 flex flex-col items-center hover:border-brand-orange/50 transition-all duration-300 group shadow-lg hover:shadow-brand-orange/10"
+                            className="group relative bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded-3xl p-8 flex flex-col items-center text-center hover:border-brand-orange/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-orange/10 hover:-translate-y-2"
                         >
-                            <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 bg-brand-black/5 dark:bg-white/5`}>
+                            <div className="mb-6 w-24 h-24 rounded-full bg-gray-50 dark:bg-brand-black border border-gray-200 dark:border-gray-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                                 <book.icon size={40} color={book.color} />
                             </div>
 
-                            <h3 className="text-xl font-bold mb-2 text-brand-black dark:text-white">{book.title}</h3>
-                            <p className="text-brand-black/60 dark:text-gray-400 text-sm mb-6 text-center">Comprehensive guide for {book.title.split(' ')[0]}</p>
+                            <h3 className="text-2xl font-bold font-display mb-4 text-brand-black dark:text-white group-hover:text-brand-orange transition-colors">{book.title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-8 leading-relaxed line-clamp-3">Comprehensive guide for {book.title.split(' ')[0]}</p>
 
                             <a
                                 href={book.link}
                                 download
-                                className="w-full py-2 px-4 bg-brand-black/5 dark:bg-[#1F2937] hover:bg-brand-orange hover:text-white dark:hover:bg-brand-orange text-brand-black dark:text-gray-200 text-center font-semibold rounded-lg transition-colors duration-200 text-sm"
+                                className="mt-auto w-full px-8 py-3 bg-brand-black dark:bg-white text-white dark:text-black font-bold rounded-lg hover:bg-brand-orange hover:text-white transition-all duration-300 transform group-hover:scale-105 active:scale-95 text-center"
                             >
                                 Download PDF
                             </a>

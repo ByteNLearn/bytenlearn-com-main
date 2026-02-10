@@ -7,7 +7,7 @@ export default function HomeTutorials() {
     const displayedCourses = courses.slice(0, 8);
 
     return (
-        <section className="py-20 md:py-32 bg-brand-black text-brand-white relative overflow-hidden">
+        <section className="py-20 md:py-32 bg-brand-black/5 dark:bg-brand-white/5 transition-colors duration-500 overflow-hidden relative group/section">
             {/* Decorative Elements */}
             <div className="absolute top-1/2 left-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-[100px] -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-pink/10 rounded-full blur-[100px]" />
@@ -18,7 +18,7 @@ export default function HomeTutorials() {
                         <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
                             Start <span className="text-brand-orange">Learning</span>.
                         </h2>
-                        <p className="text-brand-white/60 text-lg">
+                        <p className="text-brand-black dark:text-brand-white text-lg">
                             Explore our free tutorials and master the latest technologies. From HTML to Python, we have you covered.
                         </p>
                     </div>
@@ -36,7 +36,7 @@ export default function HomeTutorials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="group relative bg-brand-white/5 border border-brand-white/10 rounded-2xl p-6 hover:border-brand-orange/50 transition-all hover:-translate-y-1"
+                            className="group relative bg-brand-black/5 dark:bg-brand-white/5 border border-brand-white/10 rounded-2xl p-6 hover:border-brand-orange/50 transition-all hover:-translate-y-1"
                         >
                             <div className="flex items-center gap-4 mb-4">
                                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-brand-black/50 border border-brand-white/10 group-hover:scale-110 transition-transform shrink-0">
@@ -49,7 +49,7 @@ export default function HomeTutorials() {
                                 </h3>
                             </div>
 
-                            <p className="text-sm text-brand-white/60 mb-6 line-clamp-3">
+                            <p className="text-sm text-brand-black dark:text-brand-white mb-6 line-clamp-3">
                                 {course.description}
                             </p>
 
