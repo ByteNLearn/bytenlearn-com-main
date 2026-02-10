@@ -1,0 +1,52 @@
+import { motion } from 'framer-motion';
+
+export default function About() {
+    return (
+        <section id="about" className="py-20 md:py-32 bg-brand-white dark:bg-brand-black relative overflow-hidden transition-colors duration-500">
+            <div className="w-full md:container md:mx-auto px-0 md:px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    <motion.div
+                        className="px-6 md:px-0"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 text-brand-black dark:text-brand-white">
+                            Learn with <span className="text-brand-orange">ByteNLearn</span>.
+                        </h2>
+                        <div className="space-y-6 text-lg md:text-xl font-body opacity-80 text-brand-black dark:text-brand-white">
+                            <p>
+                                Recognized as the <b className="text-brand-orange">Premier Learning Platform for Tech Skills</b>, we don't just teach code; we build careers. Born from a passion for education, we bring <span className="text-brand-pink font-bold">practical knowledge</span> and <span className="text-brand-pink font-bold">hands-on experience</span> to every student.
+                            </p>
+                            <p>
+                                As the <b className="text-brand-orange">No.1 Destination for AI & Computer Science</b>, our curriculum bridges the gap between academic theory and industry demands, covering everything from Web Dev to Cyber Security.
+                            </p>
+                        </div>
+
+                        <div className="mt-12 grid grid-cols-2 gap-8">
+                            <div>
+                                <h4 className="text-5xl font-display font-bold text-brand-orange">10+</h4>
+                                <p className="font-bold uppercase tracking-widest text-sm text-brand-black/60 dark:text-brand-white/60">Years Experience</p>
+                            </div>
+                            <div>
+                                <h4 className="text-5xl font-display font-bold text-brand-pink">50+</h4>
+                                <p className="font-bold uppercase tracking-widest text-sm text-brand-black/60 dark:text-brand-white/60">Students Trained</p>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    <div className="relative h-[400px] md:h-[600px] bg-brand-black/5 dark:bg-brand-white/5 rounded-2xl overflow-hidden perspective-container">
+                        {/* Abstract visual representation instead of a generic stock photo */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-brand-orange via-transparent to-brand-pink opacity-20" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="text-9xl font-display font-bold opacity-10 rotate-90 tracking-widest text-brand-black dark:text-brand-white">LEARN</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    );
+}
